@@ -1,7 +1,25 @@
 [project]
 name = "docfusioner"
 version = "0.1.0"
-description = "Add your description here"
+description = "DocFusion - 智能文档融合与信息抽取系统"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "fastapi[standard]>=0.129.0",
+    "uvicorn[standard]>=0.40.0",
+    "sqlalchemy[asyncio]>=2.0.46",
+    "aiosqlite>=0.21.0",
+    "pydantic>=2.12.0",
+    "pydantic-settings>=2.12.0",
+    "annotated-types>=0.7.0",
+    "chromadb>=1.5.0",
+    "python-dotenv>=1.2.0",
+    "httpx>=0.28.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.26.0",
+    "pytest-cov>=6.0.0",
+]
